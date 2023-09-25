@@ -1,6 +1,6 @@
-GET http://localhost:8080/contacts
 
-GET https://cse341-assignment1-q09s.onrender.com HTTP/1.1
+
+GET https://cse341-assignment1-q09s.onrender.com
 
 
 
