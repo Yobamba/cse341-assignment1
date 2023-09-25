@@ -1,0 +1,25 @@
+{
+  "contact": {
+    "firstName": "Joao",
+    "lastName": "Mateus",
+    "email": "joao.mateus@primeit.pt>",
+    "favoriteColor": "red",
+    "birthDay": "1997-03-24"
+  },
+
+  "contact2": {
+    "firstName": "Julia",
+    "lastName": "Fernandes",
+    "email": "julia.fernandes@olisipo.pt",
+    "favoriteColor": "blue",
+    "birthDay": "1987-05-13"
+  },
+
+  "contact3": {
+    "firstName": "David",
+    "lastName": "Johnson",
+    "email": "david.johnson@example.com",
+    "favoriteColor": "Red",
+    "birthday": "1995-08-25"
+  }
+}
