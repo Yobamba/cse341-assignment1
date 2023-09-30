@@ -1,27 +1,46 @@
+#GET http://localhost:8080/contacts/6511fdda47f0692d782f826d
+
+### Modify a contact
+PUT http://localhost:8080/contacts/6511fdda47f0692d782f826d HTTP/1.1 
+content-type: application/json
+
+{
+   "firstName":"Julia", 
+   "lastName":"Messsi", 
+   "email":"leo@messi.com", 
+   "favoriteColor":"Brown", 
+   "birthday":"06-19-2000"
+}
+
+
+### Create contact 
+POST https://cse341-assignment1-q09s.onrender.com/contacts HTTP/1.1 
+content-type: application/json
+
+{
+   "firstName":"Leo", 
+   "lastName":"Messsi", 
+   "email":"leo@messi.com", 
+   "favoriteColor":"Brown", 
+   "birthday":"06-19-2000"
+}
+
 ### Create contact 
 POST http://localhost:8080/contacts HTTP/1.1 
 content-type: application/json
 
 {
-"firstName":"Jordi", "lastName":"Alba", "email":"jordi@alba.com", "favoriteColor":"Brown", "birthday":"06-19-2000"
-}
-
-### Another request
-POST http://localhost:8080 HTTP/1.1
-content-type: application/json
-
-{
-"firstName":"Johnny", "lastName":"Stewart", "email":"johnny.stewart@primeit.pt", "favoriteColor":"yellow", "birthDay":"1999-02-23"
+   "firstName":"Kyllian", 
+   "lastName":"Mbappe", 
+   "email":"k7@mbappe.com", 
+   "favoriteColor":"Blue", 
+   "birthday":"06-19-2000"
 }
 
 
-### Another request
-POST https://cse341-assignment1-q09s.onrender.com HTTP/1.1
-content-type: application/json
 
-{
-"firstName":"Johnny", "lastName":"Stewart", "email":"johnny.stewart@primeit.pt", "favoriteColor":"yellow", "birthDay":"1999-02-23"
-}
+
+
 GET https://cse341-assignment1-q09s.onrender.com HTTP/1.1
 
 GET http://localhost:8080/contacts/6511fdda47f0692d782f826d

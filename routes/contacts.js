@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = express.Router();
 
-// const app = express();
 const port = process.env.PORT || 8080;
 
 router.use(bodyParser.json());
@@ -12,14 +11,6 @@ const contactsController = require("../controllers/contacts");
 router.get("/", contactsController.getAll);
 
 router.get("/:id", contactsController.getSingle);
-
-// router.post("/create-contact", (req, res) => {
-//   console.log("In the post route.");
-//   const newContact = req.body;
-//   contactsController.createContact(newContact);
-//   console.log(newContact);
-//   res.send("A new contact was created");
-// });
 
 router.post("/", contactsController.createContact);
 
@@ -42,6 +33,8 @@ router.post("/", contactsController.createContact);
 //     res.send("The contact has been modified");
 //   }
 // );
+
+router.put("/:id", contactsController.modifyContact);
 
 // app.listen(port, () => {
 //   console.log("listening on port 8080");
