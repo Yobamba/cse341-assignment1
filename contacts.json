@@ -6,7 +6,6 @@
     "favoriteColor": "red",
     "birthDay": "1997-03-24"
   },
-
   "contact2": {
     "firstName": "Julia",
     "lastName": "Fernandes",
@@ -14,7 +13,6 @@
     "favoriteColor": "blue",
     "birthDay": "1987-05-13"
   },
-
   "contact3": {
     "firstName": "David",
     "lastName": "Johnson",
