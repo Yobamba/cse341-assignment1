@@ -3,15 +3,26 @@ POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Dani", "lastName":"Alves", "email":"dani@alves.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
+"firstName":"Jordi", "lastName":"Alba", "email":"jordi@alba.com", "favoriteColor":"Brown", "birthday":"06-19-2000"
 }
 
-POST http://localhost:8080/contacts HTTP/1.1
+### Another request
+POST http://localhost:8080 HTTP/1.1
 content-type: application/json
 
 {
 "firstName":"Johnny", "lastName":"Stewart", "email":"johnny.stewart@primeit.pt", "favoriteColor":"yellow", "birthDay":"1999-02-23"
 }
+
+
+### Another request
+POST https://cse341-assignment1-q09s.onrender.com HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Johnny", "lastName":"Stewart", "email":"johnny.stewart@primeit.pt", "favoriteColor":"yellow", "birthDay":"1999-02-23"
+}
+GET https://cse341-assignment1-q09s.onrender.com HTTP/1.1
 
 GET http://localhost:8080/contacts/6511fdda47f0692d782f826d
 

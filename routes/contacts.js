@@ -21,12 +21,12 @@ router.get("/:id", contactsController.getSingle);
 //   res.send("A new contact was created");
 // });
 
-// router.post("/", contactsController.createContact);
+router.post("/", contactsController.createContact);
 
-router.post("/", (req, res) => {
-  const contact = req.body;
-  console.log(contact);
-});
+// router.post("/", (req, res) => {
+//   const contact = req.body;
+//   console.log(contact);
+// });
 
 // Create a PUT route to update a contact. This route should allow for
 // a url similar to this: api-url-path/contacts/id-to-modify. (The id won't
