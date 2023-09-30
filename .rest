@@ -1,3 +1,9 @@
+### Delete a contact
+Delete http://localhost:8080/contacts/6518714e498c13438887f6b0 HTTP/1.1 
+
+
+
+
 #GET http://localhost:8080/contacts/6511fdda47f0692d782f826d
 
 ### Modify a contact

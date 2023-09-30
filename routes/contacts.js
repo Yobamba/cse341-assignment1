@@ -36,6 +36,8 @@ router.post("/", contactsController.createContact);
 
 router.put("/:id", contactsController.modifyContact);
 
+router.delete("/:id", contactsController.deleteContact);
+
 // app.listen(port, () => {
 //   console.log("listening on port 8080");
 // });

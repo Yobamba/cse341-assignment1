@@ -49,12 +49,31 @@ const modifyContact = async (req, res, next) => {
     .collection("contacts")
     .replaceOne({ _id: userId }, contact);
   if (response.acknowledged) {
-    res.status(201).json(response);
+    res.status(204).json(response);
   } else {
     res
       .status(500)
       .json(
         response.error || "Some error occurred while updating the contact."
+      );
+  }
+};
+
+const deleteContact = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const response = await mongodb
+    .getDb()
+    .db()
+    .collection("contacts")
+    .deleteOne({ _id: userId }, true);
+  console.log(response);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res
+      .status(500)
+      .json(
+        response.error || "Some error occurred while deleting the contact."
       );
   }
 };
@@ -72,4 +91,10 @@ const getSingle = async (req, res, next) => {
   });
 };
 
-module.exports = { getAll, getSingle, createContact, modifyContact };
+module.exports = {
+  getAll,
+  getSingle,
+  createContact,
+  modifyContact,
+  deleteContact,
+};
