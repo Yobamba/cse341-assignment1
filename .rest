@@ -1,12 +1,26 @@
-### Delete a contact
-Delete http://localhost:8080/contacts/6518714e498c13438887f6b0 HTTP/1.1 
+### Create contact on Render
+POST https://cse341-assignment1-q09s.onrender.com/contacts HTTP/1.1 
+content-type: application/json
 
+{
+   "firstName":"Steph", 
+   "lastName":"Curry", 
+   "email":"steph@curry.com", 
+   "favoriteColor":"Yellow", 
+   "birthday":"04-30-1987"
+}
+
+### Delete a contact on Render
+Delete https://cse341-assignment1-q09s.onrender.com/contacts/651874b1e6571efeda7d4216 HTTP/1.1 
+
+### Delete a contact locally
+Delete http://localhost:8080/contacts/6518714e498c13438887f6b0 HTTP/1.1 
 
 
 
 #GET http://localhost:8080/contacts/6511fdda47f0692d782f826d
 
-### Modify a contact
+### Modify a contact locally
 PUT http://localhost:8080/contacts/6511fdda47f0692d782f826d HTTP/1.1 
 content-type: application/json
 
@@ -19,7 +33,7 @@ content-type: application/json
 }
 
 
-### Create contact 
+### Create contact on Render
 POST https://cse341-assignment1-q09s.onrender.com/contacts HTTP/1.1 
 content-type: application/json
 
@@ -31,7 +45,7 @@ content-type: application/json
    "birthday":"06-19-2000"
 }
 
-### Create contact 
+### Create contact locally
 POST http://localhost:8080/contacts HTTP/1.1 
 content-type: application/json
 
