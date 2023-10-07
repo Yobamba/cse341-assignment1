@@ -5,7 +5,7 @@ const doc = {
     title: "Contacts API",
     description: "API that handles a database of contacts",
   },
-  host: "localhost:3000",
+  host: "https://cse341-assignment1-q09s.onrender.com",
   schemes: ["http"],
 };
 
