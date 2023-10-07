@@ -1,3 +1,10 @@
+### Delete a contact on Render
+Delete https://cse341-assignment1-q09s.onrender.com/contacts/65189f29370d9e369df5b783 HTTP/1.1 
+
+
+###Get all contacts on Render
+GET https://cse341-assignment1-q09s.onrender.com/contacts HTTP/1.1
+
 ### Create contact on Render
 POST https://cse341-assignment1-q09s.onrender.com/contacts HTTP/1.1 
 content-type: application/json
@@ -21,12 +28,12 @@ Delete http://localhost:8080/contacts/6518714e498c13438887f6b0 HTTP/1.1
 #GET http://localhost:8080/contacts/6511fdda47f0692d782f826d
 
 ### Modify a contact locally
-PUT http://localhost:8080/contacts/6511fdda47f0692d782f826d HTTP/1.1 
+PUT https://cse341-assignment1-q09s.onrender.com/contacts/651876c69a23370cdf7ff913 HTTP/1.1 
 content-type: application/json
 
 {
    "firstName":"Julia", 
-   "lastName":"Messsi", 
+   "lastName":"Rodriguez", 
    "email":"leo@messi.com", 
    "favoriteColor":"Brown", 
    "birthday":"06-19-2000"
@@ -60,8 +67,8 @@ content-type: application/json
 
 
 
-
-GET https://cse341-assignment1-q09s.onrender.com HTTP/1.1
+### Get contacts
+GET https://cse341-assignment1-q09s.onrender.com/contacts HTTP/1.1
 
 GET http://localhost:8080/contacts/6511fdda47f0692d782f826d
 

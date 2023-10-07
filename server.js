@@ -1,9 +1,14 @@
 const bodyParser = require("body-parser");
 const mongodb = require("./db/connect");
 const express = require("express");
+const swaggerDocument = require("./swagger-output.json");
+const swaggerUi = require("swagger-ui-express");
+// const swagger = require("../swagger.js");
 
 const port = process.env.PORT || 8080;
 const app = express();
+
+app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app
   .use(bodyParser.json())
@@ -22,4 +27,6 @@ mongodb.initDb((err, mongodb) => {
   }
 });
 
-//
+app.listen(3000, () => {
+  console.log("listening on port 3000 for api documentation");
+});

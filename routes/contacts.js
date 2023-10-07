@@ -8,39 +8,45 @@ router.use(bodyParser.json());
 
 const contactsController = require("../controllers/contacts");
 
-router.get("/", contactsController.getAll);
+router.get("/", contactsController.getAll, () => {
+  /**
+   * #swagger.tags = ["Contacts"]
+   * #swagger.summary = "Get all of the contacts in the satabase"
+   * #swagger.description = "Endpoint to get all of the contacts in the database"
+   */
+});
 
-router.get("/:id", contactsController.getSingle);
+router.get("/:id", contactsController.getSingle, () => {
+  /**
+   * #swagger.summary = "Get a single contact from the database"
+   * #swagger.description = "Endpoint to get a single contact from the database"
+   */
+});
 
-router.post("/", contactsController.createContact);
+router.post("/", contactsController.createContact, () => {
+  /**
+   * #swagger.summary = "Create a new contact"
+   * #swagger.description = "Endpoint to create a new contact"
+   * #swagger.parameter['obj'] => {
+   * in: 'body',
+   * type: 'object',
+   * description: 'Contact data'}
+   */
+});
 
-// router.post("/", (req, res) => {
-//   const contact = req.body;
-//   console.log(contact);
-// });
+router.put("/:id", contactsController.modifyContact, () => {
+  /**
+   * #swagger.summary = "Modify a contact"
+   * #swagger.description = "Endpoint to get a single contact from the database and modify it"
+   */
+});
 
-// Create a PUT route to update a contact. This route should allow for
-// a url similar to this: api-url-path/contacts/id-to-modify. (The id won't
-//be modified, it will just be the means of finding a specific document in the database.)
-//Return an http status code representing the successful completion of the request.
-
-// router.put(
-//   "http://localhost:8080/contacts/6511fdda47f0692d782f826d",
-//   "/:id",
-//   (req, res) => {
-//     contactsController.modifyContact();
-
-//     res.send("The contact has been modified");
-//   }
-// );
-
-router.put("/:id", contactsController.modifyContact);
-
-router.delete("/:id", contactsController.deleteContact);
-
-// app.listen(port, () => {
-//   console.log("listening on port 8080");
-// });
+router.delete("/:id", contactsController.deleteContact, () => {
+  /**
+   * #swagger.summary = "Delete a contact from the database"
+   * #swagger.description = "Endpoint to delete a contact from the database"
+   */
+});
 
 module.exports = router;
 
