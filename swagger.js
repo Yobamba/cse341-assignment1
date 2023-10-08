@@ -6,7 +6,7 @@ const doc = {
     description: "API that handles a database of contacts",
   },
   host: "https://cse341-assignment1-q09s.onrender.com",
-  schemes: ["http"],
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger-output.json";
